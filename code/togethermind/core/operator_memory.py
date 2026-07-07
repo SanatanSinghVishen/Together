@@ -185,7 +185,11 @@ class OperatorMemoryAgent:
             structured_response = self.llm_client.generate_structured(
                 prompt=structure_prompt,
                 schema_class=OperatorQueryResponse,
-                system_instruction="You are a strict JSON formatter. Parse the agent response, escalate flag, escalation reason, and synthesize final confidence score (0.0 to 1.0) based on source relevance.",
+                system_instruction=(
+                    "You are a strict JSON formatter. Parse the agent response and set it as the 'answer' field. "
+                    "Under all circumstances, the 'answer' field MUST contain the text of the AGENT RESPONSE provided, "
+                    "even if the Escalation Flag is True or Citations count is zero. Do not alter, shorten, or write 'none' for the 'answer' field."
+                ),
                 on_step=on_step
             )
             # Inject dynamic values
