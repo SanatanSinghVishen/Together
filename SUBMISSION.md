@@ -81,3 +81,12 @@ Each subfolder is a fully self-contained application with its own python backend
    * **TogetherMind**: `http://localhost:8001`
    * **Signal**: `http://localhost:8002`
    * **Corridor Compass**: `http://localhost:8003`
+
+---
+
+## 🌐 Live Deployed Application Links
+
+You can access and test the live, fully functional cloud portals here:
+* **TogetherMind**: [https://togethermind.onrender.com](https://togethermind.onrender.com)
+* **Signal**: [https://signal-5u0b.onrender.com](https://signal-5u0b.onrender.com)
+* **Corridor Compass**: [https://compass-rsbi.onrender.com](https://compass-rsbi.onrender.com)
