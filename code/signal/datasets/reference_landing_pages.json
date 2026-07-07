@@ -1,0 +1,147 @@
+[
+  {
+    "company": "Stripe",
+    "url": "https://stripe.com",
+    "category": "US Enterprise SaaS - Payments",
+    "messaging": {
+      "headline": "Financial infrastructure to grow your revenue",
+      "subheadline": "Accept payments, offer financial services, and implement custom revenue models — from your first transaction to your billionth.",
+      "value_prop_clarity": 10,
+      "buyer_pain_addressed": "Revenue growth and payment complexity",
+      "tone": "Confident, technical yet accessible, enterprise-grade"
+    },
+    "pricing": {
+      "model": "Usage-based (per-transaction)",
+      "transparency": "Fully public pricing page",
+      "tiers": ["Pay-as-you-go (2.9% + 30¢)", "Custom enterprise pricing"],
+      "free_tier": false,
+      "contact_sales_emphasis": "Available but not required"
+    },
+    "trust_signals": {
+      "security_certifications": ["PCI DSS Level 1", "SOC 1", "SOC 2", "ISO 27001"],
+      "notable_customers": ["Amazon", "Google", "Shopify", "Instacart", "Salesforce"],
+      "case_studies": true,
+      "press_mentions": true,
+      "gdpr_compliance": true,
+      "dpa_available": true,
+      "team_page": true,
+      "legal_pages": ["Terms of Service", "Privacy Policy", "DPA", "Cookies Policy"]
+    }
+  },
+  {
+    "company": "Linear",
+    "url": "https://linear.app",
+    "category": "US Enterprise SaaS - Project Management",
+    "messaging": {
+      "headline": "Linear is a purpose-built tool for planning and building products",
+      "subheadline": "Streamline issues, projects, and product roadmaps.",
+      "value_prop_clarity": 9,
+      "buyer_pain_addressed": "Slow, clunky project management tools that teams hate using",
+      "tone": "Minimal, opinionated, developer-focused"
+    },
+    "pricing": {
+      "model": "Per-seat subscription",
+      "transparency": "Fully public pricing page",
+      "tiers": ["Free", "Standard ($8/user/mo)", "Plus ($14/user/mo)", "Enterprise (custom)"],
+      "free_tier": true,
+      "contact_sales_emphasis": "Only for Enterprise"
+    },
+    "trust_signals": {
+      "security_certifications": ["SOC 2 Type II"],
+      "notable_customers": ["Vercel", "Ramp", "Cash App", "Retool"],
+      "case_studies": true,
+      "press_mentions": true,
+      "gdpr_compliance": true,
+      "dpa_available": true,
+      "team_page": true,
+      "legal_pages": ["Terms of Service", "Privacy Policy", "Security"]
+    }
+  },
+  {
+    "company": "Vercel",
+    "url": "https://vercel.com",
+    "category": "US Enterprise SaaS - Developer Platform",
+    "messaging": {
+      "headline": "Develop. Preview. Ship.",
+      "subheadline": "The autonomous stack for every app and agent.",
+      "value_prop_clarity": 8,
+      "buyer_pain_addressed": "Slow deployment cycles and poor developer experience",
+      "tone": "Technical, modern, developer-first"
+    },
+    "pricing": {
+      "model": "Tiered subscription + usage",
+      "transparency": "Fully public pricing page",
+      "tiers": ["Hobby (Free)", "Pro ($20/user/mo)", "Enterprise (custom)"],
+      "free_tier": true,
+      "contact_sales_emphasis": "Only for Enterprise"
+    },
+    "trust_signals": {
+      "security_certifications": ["SOC 2 Type II", "ISO 27001", "HIPAA"],
+      "notable_customers": ["Washington Post", "Under Armour", "Nintendo", "Loom"],
+      "case_studies": true,
+      "press_mentions": true,
+      "gdpr_compliance": true,
+      "dpa_available": true,
+      "team_page": true,
+      "legal_pages": ["Terms of Service", "Privacy Policy", "DPA", "Security"]
+    }
+  },
+  {
+    "company": "Notion",
+    "url": "https://notion.so",
+    "category": "US Enterprise SaaS - Productivity",
+    "messaging": {
+      "headline": "Your wiki, docs, & projects. Together.",
+      "subheadline": "Notion is the connected workspace where better, faster work happens.",
+      "value_prop_clarity": 9,
+      "buyer_pain_addressed": "Fragmented tools and scattered information",
+      "tone": "Friendly, inclusive, simple"
+    },
+    "pricing": {
+      "model": "Per-seat subscription",
+      "transparency": "Fully public pricing page",
+      "tiers": ["Free", "Plus ($10/user/mo)", "Business ($18/user/mo)", "Enterprise (custom)"],
+      "free_tier": true,
+      "contact_sales_emphasis": "Only for Enterprise"
+    },
+    "trust_signals": {
+      "security_certifications": ["SOC 2 Type II", "ISO 27001"],
+      "notable_customers": ["Figma", "Pixar", "Nike", "Toyota", "Uber"],
+      "case_studies": true,
+      "press_mentions": true,
+      "gdpr_compliance": true,
+      "dpa_available": true,
+      "team_page": true,
+      "legal_pages": ["Terms of Service", "Privacy Policy", "Security", "Trust"]
+    }
+  },
+  {
+    "company": "Plaid",
+    "url": "https://plaid.com",
+    "category": "US Enterprise SaaS - Fintech Infrastructure",
+    "messaging": {
+      "headline": "The easiest way for users to connect their financial accounts to an app",
+      "subheadline": "Plaid helps all companies build fintech solutions by making it easy, safe, and reliable for people to connect their financial data to apps and services.",
+      "value_prop_clarity": 9,
+      "buyer_pain_addressed": "Connecting to bank accounts is complex, insecure, and unreliable",
+      "tone": "Clear, trustworthy, developer-friendly"
+    },
+    "pricing": {
+      "model": "Usage-based (per API call)",
+      "transparency": "Public pricing for some products, custom for others",
+      "tiers": ["Pay-as-you-go", "Growth", "Custom"],
+      "free_tier": false,
+      "contact_sales_emphasis": "Moderate - encouraged for larger deployments"
+    },
+    "trust_signals": {
+      "security_certifications": ["SOC 2 Type II", "ISO 27001", "PCI DSS"],
+      "notable_customers": ["Venmo", "Robinhood", "Coinbase", "Betterment"],
+      "case_studies": true,
+      "press_mentions": true,
+      "gdpr_compliance": true,
+      "dpa_available": true,
+      "team_page": true,
+      "legal_pages": ["Terms of Service", "Privacy Policy", "Security", "End User Privacy Policy"]
+    }
+  }
+]

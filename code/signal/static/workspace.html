@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal</title>
+    <meta name="description" content="A premium, magazine-inspired GTM audit and portfolio intelligence tool.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Sofia+Sans:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        /* Force desktop dashboard bounds, prevent page scrolling in workspace */
+        html,
+        body {
+            overflow: hidden !important;
+            height: 100vh !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mc-app-container {
+            height: calc(100vh - 80px) !important;
+            padding: 12px 48px 48px 48px !important;
+            overflow-y: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Left-aligned Simple Logo Header -->
+    <div class="simple-logo-header"
+        style="max-width: 100%; padding: 24px 48px 0 48px; display: flex; justify-content: flex-start; z-index: 10; position: relative;">
+        <div class="nav-logo-group" style="cursor: pointer; display: flex; align-items: center; gap: 10px;"
+            onclick="window.location.href='/'">
+            <div class="together-logo-mark" style="display: flex; position: relative; width: 22px; height: 15px;">
+                <span class="logo-dot-red"
+                    style="width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 1px; left: 0; background-color: #FF593E; z-index: 1;"></span>
+                <span class="logo-dot-blue"
+                    style="width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 1px; right: 0; background-color: #00C1DE; opacity: 0.85;"></span>
+            </div>
+            <span class="nav-logo-text"
+                style="font-family: var(--font-family-display); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; color: var(--color-ink-black);">together<span
+                    class="logo-suffix"
+                    style="color: var(--color-signal-orange); font-weight: 400;">.signal</span></span>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="mc-app-container">
+
+        <!-- SIGNAL TOOL WORKSPACE -->
+        <main class="view-panel" id="panel-pulse">
+            <div class="workspace-layout">
+
+
+                <div class="two-column-workspace">
+                    <!-- Left: Control Deck & Companies sidebar -->
+                    <div class="control-column-card">
+                        <div class="magazine-divider"></div>
+                        <h3 class="panel-subtitle">Select Week</h3>
+                        <div class="select-control">
+                            <select id="pulse-week-selector" class="mc-select">
+                                <option value="1">WEEK 1 (BASELINE)</option>
+                                <option value="2">WEEK 2</option>
+                                <option value="3">WEEK 3</option>
+                                <option value="4">WEEK 4 (ANOMALIES BEGIN)</option>
+                                <option value="5">WEEK 5</option>
+                                <option value="6">WEEK 6 (CRITICAL OUTLIERS)</option>
+                            </select>
+                        </div>
+                        <button class="mc-btn-primary full-width" id="btn-pulse-triage" type="button">
+                            RUN TRIAGE PIPELINE
+                        </button>
+
+                        <div class="form-section-gap"></div>
+
+                        <h3 class="panel-subtitle">Portfolio Startups</h3>
+                        <div class="pulse-index-list" id="pulse-companies-list"
+                            style="max-height: 200px; overflow-y: auto;">
+                            <!-- Loaded dynamically -->
+                        </div>
+
+                        <div class="form-section-gap"
+                            style="margin-top:24px; border-top:1px solid rgba(0,0,0,0.05); padding-top:16px;"></div>
+                        <h3 class="panel-subtitle">Onboard Acquired Startup</h3>
+                        <form id="pulse-add-company-form" class="gtm-input-form">
+                            <div class="input-control" style="margin-bottom:10px;">
+                                <label for="pulse-add-id-input"
+                                    style="font-size:11px; font-weight:700; color:var(--color-slate-gray); text-transform:uppercase;">Startup
+                                    ID (slug)</label>
+                                <input type="text" id="pulse-add-id-input" placeholder="e.g. spendflo" required
+                                    style="width:100%; padding:8px 12px; border:1px solid #E4DFD5; border-radius:var(--radius-pill); font-size:13px; background-color:var(--color-canvas);">
+                            </div>
+                            <div class="input-control" style="margin-bottom:10px;">
+                                <label for="pulse-add-url-input"
+                                    style="font-size:11px; font-weight:700; color:var(--color-slate-gray); text-transform:uppercase;">Website
+                                    URL (to auto-scrape details)</label>
+                                <input type="url" id="pulse-add-url-input" placeholder="e.g. https://www.spendflo.com"
+                                    style="width:100%; padding:8px 12px; border:1px solid #E4DFD5; border-radius:var(--radius-pill); font-size:13px; background-color:var(--color-canvas);">
+                            </div>
+
+                            <!-- Toggle Manual Fields Accordion -->
+                            <div class="manual-fields-toggle" id="manual-fields-toggle"
+                                style="font-size:12px; font-weight:700; color:var(--color-signal-orange); cursor:pointer; margin: 10px 0; text-decoration: underline;">
+                                Show manual input fields
+                            </div>
+
+                            <div id="manual-company-fields" class="hidden">
+                                <div class="input-control" style="margin-bottom:10px;">
+                                    <label for="pulse-add-name-input"
+                                        style="font-size:11px; font-weight:700; color:var(--color-slate-gray); text-transform:uppercase;">Company
+                                        Name</label>
+                                    <input type="text" id="pulse-add-name-input" placeholder="e.g. Spendflo"
+                                        style="width:100%; padding:8px 12px; border:1px solid #E4DFD5; border-radius:var(--radius-pill); font-size:13px; background-color:var(--color-canvas);">
+                                </div>
+                                <div class="input-control" style="margin-bottom:10px;">
+                                    <label for="pulse-add-sector-input"
+                                        style="font-size:11px; font-weight:700; color:var(--color-slate-gray); text-transform:uppercase;">Sector</label>
+                                    <input type="text" id="pulse-add-sector-input" placeholder="e.g. SaaS Ops"
+                                        style="width:100%; padding:8px 12px; border:1px solid #E4DFD5; border-radius:var(--radius-pill); font-size:13px; background-color:var(--color-canvas);">
+                                </div>
+                                <div class="input-control" style="margin-bottom:10px;">
+                                    <label for="pulse-add-stage-input"
+                                        style="font-size:11px; font-weight:700; color:var(--color-slate-gray); text-transform:uppercase;">Stage</label>
+                                    <input type="text" id="pulse-add-stage-input" placeholder="e.g. Seed"
+                                        style="width:100%; padding:8px 12px; border:1px solid #E4DFD5; border-radius:var(--radius-pill); font-size:13px; background-color:var(--color-canvas);">
+                                </div>
+                                <div class="input-control" style="margin-bottom:12px;">
+                                    <label for="pulse-add-desc-input"
+                                        style="font-size:11px; font-weight:700; color:var(--color-slate-gray); text-transform:uppercase;">Description</label>
+                                    <textarea id="pulse-add-desc-input" placeholder="Brief description..."
+                                        style="width:100%; height:60px; padding:10px 12px; border:1px solid #E4DFD5; border-radius:12px; font-size:13px; background-color:var(--color-canvas); resize:none;"></textarea>
+                                </div>
+                            </div>
+
+                            <button class="mc-btn-secondary full-width" id="btn-pulse-add-company" type="submit">
+                                ONBOARD ACQUIRED STARTUP
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Active Briefing & Triage Board -->
+                    <div class="output-column-card">
+                        <div class="output-placeholder-box" id="pulse-placeholder">
+                            <div class="big-empty-icon">📈</div>
+                            <h4>Portfolio Health Dashboard</h4>
+                            <p>Choose a week on the left and run the pipeline. We will review founder updates, find
+                                deviations, and show a summary.</p>
+                        </div>
+
+                        <!-- Active briefing workspace -->
+                        <div class="active-response-container hidden" id="pulse-briefing-workspace">
+                            <!-- Executive summary magazine panel -->
+                            <article class="magazine-summary-block">
+                                <div class="briefing-meta-header">
+                                    <span class="meta-tag" id="pulse-report-date">Weekly Report</span>
+                                </div>
+                                <h2 class="display-md" style="margin: 8px 0 16px 0;">Startup Health Summary</h2>
+                                <div class="briefing-summary-content" id="pulse-summary-text">
+                                    <!-- Loaded dynamically -->
+                                </div>
+                            </article>
+
+                            <!-- Urgent Alert checklist -->
+                            <section class="triage-board-section">
+                                <h3 class="board-section-title">Urgent Startup Action Items</h3>
+                                <div class="triage-board-grid" id="pulse-triage-grid">
+                                    <!-- Loaded dynamically -->
+                                </div>
+                            </section>
+
+                            <!-- Orchestrator trace -->
+                            <div class="reasoning-accordion-card" style="margin-top: 24px;">
+                                <div class="reasoning-accordion-header" id="pulse-trace-header">
+                                    <span>Agent Thinking Steps</span>
+                                    <span class="chevron-arrow">▼</span>
+                                </div>
+                                <div class="reasoning-accordion-body hidden" id="pulse-trace-body">
+                                    <!-- Loaded dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Company Detail Profile Modal (reused across tools) -->
+        <div class="modal-overlay hidden" id="global-company-modal">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h2 id="modal-company-title">Company Profile Details</h2>
+                    <button class="btn-close-modal" id="btn-close-modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-tab-headers">
+                        <button class="modal-tab active" id="tab-btn-profile">About Company</button>
+                        <button class="modal-tab" id="tab-btn-history">Founder Updates History</button>
+                    </div>
+
+                    <!-- Tab: Profile details -->
+                    <div class="tab-content" id="tab-content-profile">
+                        <div class="spec-table-row">
+                            <div class="spec-label">SECTOR</div>
+                            <div class="spec-value" id="modal-val-sector">-</div>
+                        </div>
+                        <div class="spec-table-row">
+                            <div class="spec-label">STAGE</div>
+                            <div class="spec-value" id="modal-val-stage">-</div>
+                        </div>
+                        <div class="spec-table-row">
+                            <div class="spec-label">FOUNDED</div>
+                            <div class="spec-value" id="modal-val-founded">-</div>
+                        </div>
+                        <div class="spec-table-row">
+                            <div class="spec-label">FOUNDERS</div>
+                            <div class="spec-value" id="modal-val-founders">-</div>
+                        </div>
+                        <div class="spec-table-row">
+                            <div class="spec-label">DESCRIPTION</div>
+                            <div class="spec-value" id="modal-val-desc">-</div>
+                        </div>
+                        <div class="spec-table-row">
+                            <div class="spec-label">INVESTMENT THESIS</div>
+                            <div class="spec-value" id="modal-val-thesis">-</div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Timeline updates -->
+                    <div class="tab-content hidden" id="tab-content-history">
+                        <div class="timeline-container" id="modal-val-timeline">
+                            <!-- Timeline items -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/static/app.js?v=3"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Database files
+portfolio.db
+chroma_db/
+
+# API keys & local config
+.env
+.agents/
+.gemini/

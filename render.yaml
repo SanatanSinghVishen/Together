@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: together-mind
+    env: python
+    plan: free
+    rootDir: code/togethermind
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: SQLITE_DB_PATH
+        value: ./portfolio.db
+
+  - type: web
+    name: portfolio-signal
+    env: python
+    plan: free
+    rootDir: code/signal
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: SQLITE_DB_PATH
+        value: ./portfolio.db
+
+  - type: web
+    name: corridor-compass
+    env: python
+    plan: free
+    rootDir: code/corridor_compass
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: SQLITE_DB_PATH
+        value: ./portfolio.db

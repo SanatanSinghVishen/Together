@@ -1,0 +1,290 @@
+[
+  {
+    "company_id": "spendflo",
+    "company_name": "Spendflo",
+    "week": 1,
+    "date": "2025-05-01",
+    "update_text": "Hey Together team, quick update for Week 1. We closed $45k in new ARR this week. Client onboarding going smoothly. We're actively looking for a VP of Sales based in San Francisco to accelerate our US enterprise motion. If you have any leads, please intro them.",
+    "author": "Siddharth Sridharan"
+  },
+  {
+    "company_id": "spendflo",
+    "company_name": "Spendflo",
+    "week": 2,
+    "date": "2025-05-08",
+    "update_text": "Week 2 update. Strong week. Closed another $35k in ARR, including a mid-market contract with a US fintech startup ($24k ACV). We have completed our SOC2 Type II audit, which should unblock 3 enterprise deals currently stuck in procurement. Still hunting for that SF VP of Sales.",
+    "author": "Siddharth Sridharan"
+  },
+  {
+    "company_id": "spendflo",
+    "company_name": "Spendflo",
+    "week": 3,
+    "date": "2025-05-15",
+    "update_text": "Week 3 update. Closed $60k in ARR! Upmarket pipeline is swelling. However, our main bottleneck is engineering hiring in Bangalore. We need senior Django/React devs who can scale our platform. Manav, any chance we can get some support from the Together talent network?",
+    "author": "Siddharth Sridharan"
+  },
+  {
+    "company_id": "spendflo",
+    "company_name": "Spendflo",
+    "week": 4,
+    "date": "2025-05-22",
+    "update_text": "Week 4 update. ARR is now at $1.38M. We did our first customer advisory board meeting. The feedback was very clear: clients want more detailed integrations with AWS and GCP billing. VP of Sales pipeline is moving; we are interviewing 3 candidates next week.",
+    "author": "Siddharth Sridharan"
+  },
+  {
+    "company_id": "spendflo",
+    "company_name": "Spendflo",
+    "week": 5,
+    "date": "2025-05-29",
+    "update_text": "Week 5 update. Closed a major US enterprise account ($80k ACV)! This is a big win. However, our NRR dipped slightly to 112% due to churn in our SMB tier. We are actively investigating if we should sunset SMB self-serve and focus entirely on mid-market and enterprise.",
+    "author": "Siddharth Sridharan"
+  },
+  {
+    "company_id": "spendflo",
+    "company_name": "Spendflo",
+    "week": 6,
+    "date": "2025-06-05",
+    "update_text": "Week 6 update. Solid end to the month. ARR stands at $1.52M. We've extended an offer to a VP of Sales candidate from SF (ex-Ramp director). Bangalore engineering team has onboarded 2 new devs. Main ask for this week is introductions to US enterprise CIOs who manage more than $5M in annual SaaS spend.",
+    "author": "Siddharth Sridharan"
+  },
+  {
+    "company_id": "composio",
+    "company_name": "Composio",
+    "week": 1,
+    "date": "2025-05-01",
+    "update_text": "Hi Together GP team, here is the Week 1 update for Composio. We crossed 3,000 monthly active developers! GitHub stars grew by 15% this week. We launched our integrations hub. The burn rate is steady. No major asks this week.",
+    "author": "Karanvir Gill"
+  },
+  {
+    "company_id": "composio",
+    "company_name": "Composio",
+    "week": 2,
+    "date": "2025-05-08",
+    "update_text": "Week 2 update. Developer engagement is skyrocketing. We had our first 'agent hackathon' where 150 developers built tools using Composio. The main feedback: developers want tighter integrations with LangChain and LlamaIndex. We are releasing those wrappers tomorrow.",
+    "author": "Karanvir Gill"
+  },
+  {
+    "company_id": "composio",
+    "company_name": "Composio",
+    "week": 3,
+    "date": "2025-05-15",
+    "update_text": "Week 3 update. Cross-developer adoption continues. 4,500 active devs now. However, we're seeing high API costs due to sandbox usage. We need to start thinking about our monetization strategy. We're debating charging per tool call vs. a flat developer subscription.",
+    "author": "Karanvir Gill"
+  },
+  {
+    "company_id": "composio",
+    "company_name": "Composio",
+    "week": 4,
+    "date": "2025-05-22",
+    "update_text": "Week 4 update. Active developers reached 5,800. GitHub stars at 8,200. We started pilot programs with 3 enterprise teams who want to deploy Composio behind their VPC. This is our first real enterprise pipeline! We need guidance on how to structure a VPC pricing contract.",
+    "author": "Karanvir Gill"
+  },
+  {
+    "company_id": "composio",
+    "company_name": "Composio",
+    "week": 5,
+    "date": "2025-05-29",
+    "update_text": "Week 5 update. Week-over-week dev growth was 12%. Very exciting. However, one of our key engineers is leaving. This is a big blow to our timeline for the enterprise self-serve portal. We need to immediately hire a Senior Go developer in Bangalore.",
+    "author": "Karanvir Gill"
+  },
+  {
+    "company_id": "composio",
+    "company_name": "Composio",
+    "week": 6,
+    "date": "2025-06-05",
+    "update_text": "Week 6 update. dev community is incredibly active. 7,200 devs. We started the enterprise pilot with one team. The feedback is great, but they are asking for custom SLAs and dedicated support. Since we are only 12 people, this is a heavy operational burden. We need a partner call to discuss whether to hire customer support engineers this early.",
+    "author": "Karanvir Gill"
+  },
+  {
+    "company_id": "emergent",
+    "company_name": "Emergent AI",
+    "week": 1,
+    "date": "2025-05-01",
+    "update_text": "Emergent Week 1: ARR is at $750k. We are seeing insane demand for our customer support agents from US retail brands. We signed 2 pilots this week ($25k each). Our main bottleneck is infrastructure limits; we are hitting OpenAI rate limits frequently.",
+    "author": "Pranav Sharma"
+  },
+  {
+    "company_id": "emergent",
+    "company_name": "Emergent AI",
+    "week": 2,
+    "date": "2025-05-08",
+    "update_text": "Emergent Week 2: Closed one of the retail pilots into a $120k ARR contract! We are scaling fast. ARR is now at $870k. We are migrating our inference to run on local models to reduce latency. We need intros to GPU hosting providers who can give us dedicated H100s.",
+    "author": "Pranav Sharma"
+  },
+  {
+    "company_id": "emergent",
+    "company_name": "Emergent AI",
+    "week": 3,
+    "date": "2025-05-15",
+    "update_text": "Emergent Week 3: Crossed $1M ARR! This is 4 months ahead of schedule. The team is working 18-hour days. We need help scaling our customer success team in India to support US timezone queries. Girish, how did Freshworks scale its early US support desk?",
+    "author": "Pranav Sharma"
+  },
+  {
+    "company_id": "emergent",
+    "company_name": "Emergent AI",
+    "week": 4,
+    "date": "2025-05-22",
+    "update_text": "Emergent Week 4: ARR at $1.2M. We closed another enterprise account. However, we are seeing high token latency which is leading to customer complaints on live calls. We are testing Groq and other specialized hardware. Main ask: senior infrastructure engineers.",
+    "author": "Pranav Sharma"
+  },
+  {
+    "company_id": "emergent",
+    "company_name": "Emergent AI",
+    "week": 5,
+    "date": "2025-05-29",
+    "update_text": "Emergent Week 5: ARR at $1.4M. Two customer pilots are starting next week. The team is burning out. We had a developer quit due to stress. We need to hire immediately. We are looking for an HR lead who can help us recruit and build a sustainable culture.",
+    "author": "Pranav Sharma"
+  },
+  {
+    "company_id": "emergent",
+    "company_name": "Emergent AI",
+    "week": 6,
+    "date": "2025-06-05",
+    "update_text": "Emergent Week 6: ARR is now $1.65M. The growth is incredible, but the operational strain is severe. Customer retention is high, but latency issues persist. We need to hire 4 platform engineers in the next 2 weeks. Any recommendations from the portfolio network would be huge.",
+    "author": "Pranav Sharma"
+  },
+  {
+    "company_id": "metaforms",
+    "company_name": "Metaforms",
+    "week": 1,
+    "date": "2025-05-01",
+    "update_text": "Metaforms Week 1: ARR stands at $340k. We are seeing flat growth this week. Dev completion rate on conversational forms is high, but we are struggling to acquire new SMB customers. Marketing CAC has doubled on Google Ads. We are testing Meta Ads.",
+    "author": "Akshat Goel"
+  },
+  {
+    "company_id": "metaforms",
+    "company_name": "Metaforms",
+    "week": 2,
+    "date": "2025-05-08",
+    "update_text": "Metaforms Week 2: ARR at $335k. We had two SMB accounts churn ($10k ARR total) citing cost-cutting. CAC remains high. We are realizing that SMBs don't value conversational forms enough to pay a premium. We want to pivot to mid-market market research firms. We need intros to agencies.",
+    "author": "Akshat Goel"
+  },
+  {
+    "company_id": "metaforms",
+    "company_name": "Metaforms",
+    "week": 3,
+    "date": "2025-05-15",
+    "update_text": "Metaforms Week 3: ARR flat at $335k. We started outbound sales to research agencies. Response rates are low. The product works well, but founders are struggling with sales messaging. We need help defining our value proposition for the mid-market segment.",
+    "author": "Akshat Goel"
+  },
+  {
+    "company_id": "metaforms",
+    "company_name": "Metaforms",
+    "week": 4,
+    "date": "2025-05-22",
+    "update_text": "Metaforms Week 4: ARR dipped to $320k due to more SMB churn. This is our second consecutive week of negative net growth. Our bank runway is 14 months, so we are not in immediate danger, but we need to stop the bleeding. We are pausing all ad spend to conserve cash.",
+    "author": "Akshat Goel"
+  },
+  {
+    "company_id": "metaforms",
+    "company_name": "Metaforms",
+    "week": 5,
+    "date": "2025-05-29",
+    "update_text": "Metaforms Week 5: ARR at $315k. Churn is slowing down but growth is zero. The engineering team is building features, but the sales team is not closing. We feel stuck. We need a partner meeting to discuss a potential pivot or restructuring of our sales team.",
+    "author": "Akshat Goel"
+  },
+  {
+    "company_id": "metaforms",
+    "company_name": "Metaforms",
+    "week": 6,
+    "date": "2025-06-05",
+    "update_text": "Metaforms Week 6: ARR stands at $310k. Churn has stabilized. We have signed a pilot with a market research firm ($5k). If this succeeds, it opens a pipeline. However, morale is low. The founders need a partner call to get aligned on the GTM strategy and evaluate if we have the right team.",
+    "author": "Akshat Goel"
+  },
+  {
+    "company_id": "confido",
+    "company_name": "Confido",
+    "week": 1,
+    "date": "2025-05-01",
+    "update_text": "Confido Week 1: ARR at $160k. We are working on our first pilot with a US hospital group. They are asking for HIPAA compliance verification and a signed Business Associate Agreement (BAA). We need a healthcare lawyer recommendation.",
+    "author": "Rohan Mehta"
+  },
+  {
+    "company_id": "confido",
+    "company_name": "Confido",
+    "week": 2,
+    "date": "2025-05-08",
+    "update_text": "Confido Week 2: Hospital pilot is moving slowly due to legal reviews. BAA is signed, but now their IT security team is asking for a full SOC2 report. Since we are pre-seed (5 people), we don't have SOC2 yet. How do early startups handle this with US hospitals?",
+    "author": "Rohan Mehta"
+  },
+  {
+    "company_id": "confido",
+    "company_name": "Confido",
+    "week": 3,
+    "date": "2025-05-15",
+    "update_text": "Confido Week 3: We found an automated compliance platform to fast-track SOC2. It will cost us $10k, which is a big chunk of our pre-seed cash, but necessary to unblock the $80k contract. We're proceeding. No revenue change this week.",
+    "author": "Rohan Mehta"
+  },
+  {
+    "company_id": "confido",
+    "company_name": "Confido",
+    "week": 4,
+    "date": "2025-05-22",
+    "update_text": "Confido Week 4: SOC2 preparation is taking up 80% of our engineering time. Product development has slowed down. However, the hospital IT team has agreed to a conditional pilot while we complete the audit. ARR remains at $160k.",
+    "author": "Rohan Mehta"
+  },
+  {
+    "company_id": "confido",
+    "company_name": "Confido",
+    "week": 5,
+    "date": "2025-05-29",
+    "update_text": "Confido Week 5: Pilot officially kicked off! The billing department is using our tool to draft appeals. Early feedback: our LLM agent is identifying billing errors with 92% accuracy, saving them 4 hours per file. The ROI is clear.",
+    "author": "Rohan Mehta"
+  },
+  {
+    "company_id": "confido",
+    "company_name": "Confido",
+    "week": 6,
+    "date": "2025-06-05",
+    "update_text": "Confido Week 6: Hospital pilot completed. They want to expand the contract to the entire billing department, which would bump our ARR to $240k! However, they require integration with their Epic EHR system. Epic integrations are notoriously difficult. We need intros to developers who have built Epic EHR integrations before.",
+    "author": "Rohan Mehta"
+  },
+  {
+    "company_id": "gibran",
+    "company_name": "Gibran AI",
+    "week": 1,
+    "date": "2025-05-01",
+    "update_text": "Gibran Week 1: We launched our open-source coding agent on GitHub. In 48 hours, we hit 2,500 GitHub stars and trended on Hacker News! No revenue yet, but developer excitement is very high.",
+    "author": "Amit Patel"
+  },
+  {
+    "company_id": "gibran",
+    "company_name": "Gibran AI",
+    "week": 2,
+    "date": "2025-05-08",
+    "update_text": "Gibran Week 2: GitHub stars reached 5,000. We are getting a lot of community pull requests. The product is working well for fixing simple Python bugs. We are starting to work on complex multi-file edits.",
+    "author": "Amit Patel"
+  },
+  {
+    "company_id": "gibran",
+    "company_name": "Gibran AI",
+    "week": 3,
+    "date": "2025-05-15",
+    "update_text": "Gibran Week 3: Crossed 7,500 stars. We are seeing interest from tech teams at major Indian startups who want to host Gibran locally. We are setting up pilot sandboxes. No revenue yet, burn rate at $50k/mo.",
+    "author": "Amit Patel"
+  },
+  {
+    "company_id": "gibran",
+    "company_name": "Gibran AI",
+    "week": 4,
+    "date": "2025-05-22",
+    "update_text": "Gibran Week 4: GitHub stars reached 9,200. We hired our first platform engineer. We are experiencing high compute costs to run tests on our agents. We need cloud credits. Together team, can you help us get AWS or GCP credits?",
+    "author": "Amit Patel"
+  },
+  {
+    "company_id": "gibran",
+    "company_name": "Gibran AI",
+    "week": 5,
+    "date": "2025-05-29",
+    "update_text": "Gibran Week 5: We crossed 11,000 stars. We started a pilot with a major B2B SaaS startup (50 devs). They are using Gibran to automate test writing. Early metrics show dev productivity increased by 20%.",
+    "author": "Amit Patel"
+  },
+  {
+    "company_id": "gibran",
+    "company_name": "Gibran AI",
+    "week": 6,
+    "date": "2025-06-05",
+    "update_text": "Gibran Week 6: GitHub stars at 12,500. The developer adoption is solid. The pilot is moving toward a paid contract next month. We need advice on how to price our enterprise self-serve tier. Should we charge per seat or per pull request merged?",
+    "author": "Amit Patel"
+  }
+]

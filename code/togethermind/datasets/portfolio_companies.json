@@ -1,0 +1,116 @@
+[
+  {
+    "id": "spendflo",
+    "name": "Spendflo",
+    "sector": "SaaS Ops / Buying",
+    "stage": "Series A",
+    "founded": "2021",
+    "founders": [
+      "Siddharth Sridharan",
+      "Ajay Kumar"
+    ],
+    "description": "Spendflo helps fast-growing companies buy, manage, and optimize their SaaS stack. It acts as an outsourced SaaS procurement team, saving clients up to 30% on subscription costs.",
+    "investment_thesis": "Buying SaaS is highly fragmented and inefficient. Spendflo centralizes procurement data and uses collective bargaining power. Girish and Manav backed Spendflo due to clear product-market fit in the US-India corridor.",
+    "key_metrics_at_investment": {
+      "arr": 1200000,
+      "nrr": 115,
+      "headcount": 35,
+      "burn_rate": 80000
+    }
+  },
+  {
+    "id": "composio",
+    "name": "Composio",
+    "sector": "AI Agent Infra",
+    "stage": "Seed",
+    "founded": "2023",
+    "founders": [
+      "Karanvir Gill",
+      "Abhishek Viswanathan"
+    ],
+    "description": "Composio provides the tooling and integrations layer for AI agents. It connects LLMs to over 100+ tools (GitHub, Slack, Salesforce, database executors) out of the box with optimal agentic execution.",
+    "investment_thesis": "AI agents are only as good as the tools they can call. Composio acts as the 'connection layer' or 'Zapier for agents' which matches Together Fund's thesis of building the foundational infrastructure for agentic workflows.",
+    "key_metrics_at_investment": {
+      "monthly_active_devs": 2500,
+      "weekly_growth": 8.5,
+      "headcount": 12,
+      "burn_rate": 45000
+    }
+  },
+  {
+    "id": "emergent",
+    "name": "Emergent AI",
+    "sector": "Enterprise Voice Agents",
+    "stage": "Seed",
+    "founded": "2024",
+    "founders": [
+      "Pranav Sharma",
+      "Sanjay Nair"
+    ],
+    "description": "Emergent AI builds autonomous customer support voice agents that handle complex enterprise workflows with high natural language accuracy.",
+    "investment_thesis": "Voice AI has reached human parity in latency and expression. Emergent targets the massive US call center market with Indian developer arbitrage. This is a classic Cheetah startup scaling from zero to $10M ARR rapidly.",
+    "key_metrics_at_investment": {
+      "arr": 500000,
+      "nrr": 130,
+      "headcount": 8,
+      "burn_rate": 30000
+    }
+  },
+  {
+    "id": "metaforms",
+    "name": "Metaforms",
+    "sector": "AI Consumer Insights",
+    "stage": "Seed",
+    "founded": "2023",
+    "founders": [
+      "Akshat Goel",
+      "Devika Sen"
+    ],
+    "description": "Metaforms uses interactive, conversational AI forms to collect rich consumer feedback, replacing static typeforms and yielding 4x higher completion rates.",
+    "investment_thesis": "Forms are a structural barrier to feedback. Metaforms makes forms a dynamic, pleasant chat interface. Backed due to strong early traction and dropout founder hustle.",
+    "key_metrics_at_investment": {
+      "arr": 350000,
+      "nrr": 105,
+      "headcount": 10,
+      "burn_rate": 25000
+    }
+  },
+  {
+    "id": "confido",
+    "name": "Confido",
+    "sector": "Healthcare Fintech",
+    "stage": "Pre-Seed",
+    "founded": "2024",
+    "founders": [
+      "Rohan Mehta",
+      "Neha Kapoor"
+    ],
+    "description": "Confido automates medical billing disputes and prior authorization workflows for US hospitals using LLM-agent reasoning.",
+    "investment_thesis": "US healthcare admin costs are astronomical. Medical coding and dispute resolution are highly rule-based but context-rich, making them ripe for agentic automation.",
+    "key_metrics_at_investment": {
+      "arr": 150000,
+      "nrr": 100,
+      "headcount": 5,
+      "burn_rate": 18000
+    }
+  },
+  {
+    "id": "gibran",
+    "name": "Gibran AI",
+    "sector": "Autonomous Coding Agents",
+    "stage": "Seed",
+    "founded": "2024",
+    "founders": [
+      "Amit Patel",
+      "Vikram Rao"
+    ],
+    "description": "Gibran AI builds specialized autonomous software engineering agents that integrate into GitHub repos to fix bugs and write tests.",
+    "investment_thesis": "Led $2.6M Seed round. Founders are ex-Google DeepMind researchers who possess world-class talent in agentic architectures.",
+    "key_metrics_at_investment": {
+      "arr": 0,
+      "stars": 12000,
+      "headcount": 6,
+      "burn_rate": 50000
+    }
+  }
+]

@@ -1,0 +1,22 @@
+# Sample URLs for US Corridor Readiness Audit
+# These are real Indian SaaS startups selling to US enterprise buyers.
+# The tool will fetch and audit these live at runtime.
+
+## Indian SaaS Companies Selling to US (Audit Targets)
+https://www.chargebee.com
+https://www.freshworks.com
+https://www.zoho.com
+https://www.postman.com
+https://www.browserstack.com
+https://www.razorpay.com
+https://www.leadsquared.com
+https://www.clevertap.com
+https://www.hevodata.com
+https://www.wingify.com
+
+## Strong US Enterprise Landing Pages (Reference Benchmarks)
+https://stripe.com
+https://linear.app
+https://vercel.com
+https://notion.so
+https://plaid.com

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TogetherMind</title>
+    <meta name="description" content="A premium, magazine-inspired GTM audit and portfolio intelligence tool.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Sofia+Sans:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        /* Force desktop dashboard bounds, prevent page scrolling in workspace */
+        html,
+        body {
+            overflow: hidden !important;
+            height: 100vh !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mc-app-container {
+            height: calc(100vh - 80px) !important;
+            padding: 12px 48px 48px 48px !important;
+            overflow-y: auto !important;
+        }
+    </style>
+    <style>
+        .role-tab {
+            background-color: transparent;
+            color: var(--color-slate-gray);
+            border: none;
+            outline: none;
+        }
+        .role-tab.active {
+            background-color: var(--color-ink-black) !important;
+            color: var(--color-white) !important;
+        }
+        .role-tab:hover:not(.active) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Left-aligned Simple Logo Header -->
+    <div class="simple-logo-header"
+        style="max-width: 100%; padding: 24px 48px 0 48px; display: flex; justify-content: flex-start; z-index: 10; position: relative;">
+        <div class="nav-logo-group" style="cursor: pointer; display: flex; align-items: center; gap: 10px;"
+            onclick="window.location.href='/'">
+            <div class="together-logo-mark" style="display: flex; position: relative; width: 22px; height: 15px;">
+                <span class="logo-dot-red"
+                    style="width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 1px; left: 0; background-color: #FF593E; z-index: 1;"></span>
+                <span class="logo-dot-blue"
+                    style="width: 12px; height: 12px; border-radius: 50%; position: absolute; top: 1px; right: 0; background-color: #00C1DE; opacity: 0.85;"></span>
+            </div>
+            <span class="nav-logo-text"
+                style="font-family: var(--font-family-display); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; color: var(--color-ink-black);">together<span
+                    class="logo-suffix" style="color: var(--color-signal-orange); font-weight: 400;">.mind</span></span>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="mc-app-container">
+
+        <!-- TOGETHERMIND TOOL WORKSPACE -->
+        <main class="view-panel" id="panel-memory">
+            <div class="workspace-layout">
+
+
+                <div class="two-column-workspace">
+                    <!-- Left: Control Deck (Segregated Panels) -->
+                    <div class="control-column-card">
+                        <div class="magazine-divider"></div>
+                        
+                        <!-- Role Selector Tabs -->
+                        <div class="role-selector-tabs" style="display: flex; gap: 8px; margin-bottom: 20px; background-color: var(--color-canvas); padding: 4px; border-radius: var(--radius-pill);">
+                            <button type="button" id="btn-tab-founder" class="role-tab active" style="flex: 1; padding: 8px; border: none; border-radius: var(--radius-pill); font-family: var(--font-family-display); font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s;">FOUNDER DESK</button>
+                            <button type="button" id="btn-tab-investor" class="role-tab" style="flex: 1; padding: 8px; border: none; border-radius: var(--radius-pill); font-family: var(--font-family-display); font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s;">INVESTOR PANEL</button>
+                        </div>
+                        
+                        <!-- Panel A: Founder Desk -->
+                        <div id="deck-panel-founder">
+                            <h3 class="panel-subtitle">Ask a Question</h3>
+                            <p style="font-size: 13px; color: var(--color-slate-gray); margin-bottom: 16px; line-height: 1.45;">Ask scaling or GTM questions to search our partners' collective playbooks and get cited answers instantly.</p>
+                            <form id="memory-query-form" class="gtm-input-form">
+                                <div class="textarea-control">
+                                    <textarea id="memory-chat-input"
+                                        placeholder="e.g. How should a Seed-stage company think about their first US enterprise sales hire?"
+                                        required></textarea>
+                                </div>
+                                <button class="mc-btn-primary full-width" id="btn-memory-submit" type="submit">
+                                    QUERY PLAYBOOKS
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Panel B: Investor Panel (Hidden by default) -->
+                        <div id="deck-panel-investor" class="hidden">
+                            <h3 class="panel-subtitle">System Status</h3>
+                            <p style="font-size: 13px; color: var(--color-slate-gray); margin-bottom: 16px; line-height: 1.45;">Upload strategy playbooks, essays, or memos to make your VC experience searchable and reusable 24/7 for founders.</p>
+                            <div class="status-indicator-box">
+                                <div class="status-label">Library Status</div>
+                                <div class="status-value-row">
+                                    <span class="status-indicator-dot" id="memory-status-dot"></span>
+                                    <span class="status-indicator-text" id="memory-status-text">Checking...</span>
+                                </div>
+                            </div>
+
+                            <div class="status-indicator-box">
+                                <div class="status-label">Total Playbooks</div>
+                                <div class="status-indicator-text" id="memory-doc-count">-</div>
+                            </div>
+
+                            <button class="mc-btn-secondary full-width" id="btn-memory-ingest" type="button" style="margin-bottom: 20px;">
+                                RE-INDEX PLAYBOOKS
+                            </button>
+
+                            <div class="magazine-divider" style="margin: 20px 0;"></div>
+
+                            <h3 class="panel-subtitle">Upload Playbook File</h3>
+                            <form id="memory-add-doc-form" class="gtm-input-form">
+                                <div class="input-control" style="margin-bottom:12px;">
+                                    <label
+                                        style="font-size:11px; font-weight:700; color:var(--color-slate-gray); text-transform:uppercase;">Select
+                                        Playbook File (.txt, .md, .pdf)</label>
+                                    <div class="file-drop-zone" id="file-drop-zone"
+                                        style="border: 2px dashed #E4DFD5; border-radius: 12px; padding: 20px; text-align: center; background-color: var(--color-canvas); cursor: pointer; transition: border-color 0.3s ease;">
+                                        <span style="font-size: 24px; display: block; margin-bottom: 8px;">📁</span>
+                                        <span id="file-drop-text"
+                                            style="font-size: 13px; color: var(--color-slate-gray); font-family:var(--font-family-display);">Drag
+                                            & drop or click to browse</span>
+                                        <input type="file" id="memory-file-input" accept=".txt,.md,.pdf"
+                                            style="display: none;">
+                                    </div>
+                                </div>
+                                <button class="mc-btn-secondary full-width" id="btn-memory-add-doc" type="submit" disabled
+                                    style="opacity: 0.6; cursor: not-allowed;">
+                                    UPLOAD PLAYBOOK TO LIBRARY
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right: Active Output Console -->
+                    <div class="output-column-card">
+                        <!-- Empty Welcome message (Founder) -->
+                        <div class="output-placeholder-box" id="memory-placeholder-founder">
+                            <div class="big-empty-icon">📖</div>
+                            <h4>Founders' Consulting Desk</h4>
+                            <p>Ask scaling or GTM questions on the left. TogetherMind searches our partners' essays and playbooks to give you an instant, cited answer.</p>
+                        </div>
+
+                        <!-- Empty Welcome message (Investor) -->
+                        <div class="output-placeholder-box hidden" id="memory-placeholder-investor">
+                            <div class="big-empty-icon">📁</div>
+                            <h4>Partners' Library Management</h4>
+                            <p>Upload strategy guides, essays, and memos to store your experience in the search library. This keeps the knowledge base updated so founders can benefit 24/7, saving you from repeating the same advice.</p>
+                        </div>
+
+                        <!-- Active response player -->
+                        <div class="active-response-container hidden" id="memory-response-card">
+                            <div class="response-status-bar">
+                                <div class="now-playing-label">Result</div>
+                                <div class="badge-row">
+                                    <span class="status-badge critical hidden" id="memory-badge-escalated">GP REVIEW
+                                        REQ</span>
+                                    <span class="status-badge stable" id="memory-badge-synthesized">SYNTHESIZED</span>
+                                </div>
+                            </div>
+
+                            <h3 class="active-query-text" id="memory-active-query">"..."</h3>
+                            <div class="now-playing-status" id="memory-active-status">Analyzing playbooks...</div>
+
+                            <div class="magazine-divider" style="margin: 16px 0;"></div>
+
+                            <h4 class="section-micro-title">Answer</h4>
+                            <div class="synthesized-answer-body" id="memory-answer-text">
+                                <!-- Loaded dynamically -->
+                            </div>
+
+                            <div class="citations-container hidden" id="memory-citations-panel">
+                                <h4 class="section-micro-title">Sources Cited</h4>
+                                <div class="citations-grid" id="memory-citations-grid">
+                                    <!-- Loaded dynamically -->
+                                </div>
+                            </div>
+
+                            <!-- Reasoning trace accordion -->
+                            <div class="reasoning-accordion-card" style="margin-top: 24px;">
+                                <div class="reasoning-accordion-header" id="memory-trace-header">
+                                    <span>Agent Thinking Steps</span>
+                                    <span class="chevron-arrow">▼</span>
+                                </div>
+                                <div class="reasoning-accordion-body hidden" id="memory-trace-body">
+                                    <!-- Loaded dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="/static/app.js?v=3"></script>
+</body>
+
+</html>
