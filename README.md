@@ -1,4 +1,4 @@
-# Together Horizon — Unified Venture Intelligence Command Center
+# Together Horizon : Unified Venture Intelligence 
 
 Together Horizon acts as an automated **Operating Partner** that aggregates institutional fund playbooks, triages weekly portfolio logs, and audits landing pages for global market expansion.
 
@@ -23,6 +23,18 @@ Together Horizon has been split into three dedicated applications, allowing foun
 1. **TogetherMind** (Port `8001`): Q&A and Knowledge playbook search.
 2. **Signal** (Port `8002`): Weekly portfolio health triage dashboard.
 3. **Corridor Compass** (Port `8003`): Global readiness and landing page audit workstation.
+
+---
+
+## 🏗️ Architecture & Technology Stack
+
+Together Horizon relies on **custom-designed agentic loops and structured pipelines** communicating with **Google Gemini 3.5 Flash** (via OpenRouter):
+
+* **TogetherMind (RAG & ReAct Agent)**: semantic document indexing and query routing using a custom **ReAct (Reasoning and Action) Loop** and a local **Chroma DB** vector store. Tool calls (`search_knowledge_base`, `escalate_to_human_partner`) are parsed manually by the agent loop, keeping execution simple, fast, and fully observable.
+
+* **Signal (Triage & Analytics)**: structured metadata parsing (ARR metrics, sentiment trends, blockers) using structured schema prompts. A **longitudinal deviation logic** queries SQLite historical logs to identify metric decline and founder burnout risk.
+
+* **Corridor Compass (Multi-Agent Audit)**: an orchestration framework that executes three specialized critic agents (**Messaging Critic**, **Pricing Critic**, and **Trust Signals Critic**) in parallel to audit scraped layout text, utilizing a central **Editor Reconciler** agent to aggregate, de-duplicate, and prioritize the GTM readiness fix tickets.
 
 ---
 

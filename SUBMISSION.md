@@ -12,6 +12,28 @@ This document provides a summary of the unified venture partner intelligence sui
 
 ---
 
+## 🏗️ Architecture & Technology Stack
+
+Each tool in Together Horizon is engineered using **custom agentic loops and structured pipelines** built directly on top of the **Google Gemini 3.5 Flash** model (via OpenRouter):
+
+1. **TogetherMind (RAG & ReAct Agent)**:
+   - **Architecture**: **Semantic RAG (Retrieval-Augmented Generation)** + **Agentic ReAct (Reasoning and Action) Loop**.
+   - **Framework Details**: Built custom using the raw OpenRouter completions API and native tool schemas.
+   - **Vectordb**: Chroma DB stores and indexes document segments using local embeddings.
+   - **Logic**: A custom execution loop intercepts and parses tool calls (`search_knowledge_base`, `escalate_to_human_partner`), updating the reasoning trace dynamically before resolving the final response.
+
+2. **Signal (Structured Analytics Pipeline)**:
+   - **Architecture**: **Structured Data Extraction & Deviation Mapping Pipeline**.
+   - **Framework Details**: Custom telemetry pipeline communicating with an SQLite database.
+   - **Logic**: Founder updates are ingested, structured signals (sentiment, finance metrics, burners) are extracted using structured JSON generation, and a historical checker calculates metric drops/burnout rates over past weeks to build the Triage priority score.
+
+3. **Corridor Compass (Multi-Agent Audit & Reconciliation)**:
+   - **Architecture**: **Collaborative Multi-Agent Critic Framework**.
+   - **Framework Details**: Custom multi-agent hierarchy.
+   - **Logic**: Three parallel critic agents (Messaging Critic, Pricing Critic, Trust Signals Critic) run structural audits on the scraped layout copy. A central Editor Reconciler agent merges their ratings, resolves contradictions, writes a narrative, and generates a prioritized fix list.
+
+---
+
 ## 🔑 Environment Variables Needed
 
 Create a `.env` file in the root of the project, or in each tool's subfolder, with the following credentials:

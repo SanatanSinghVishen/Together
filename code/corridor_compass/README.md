@@ -10,6 +10,11 @@ Corridor Compass is an automated GTM dilgence critic designed to prepare India-b
 * **Conflict Resolution**: An editor agent reviews critics' ratings, resolves score contradictions, and writes an editorial narrative.
 * **Prioritized Checklist**: Recommends action items sorted by business impact and development effort.
 
+## Technical Architecture & AI Engine
+Corridor Compass is built on a custom collaborative multi-agent critic framework:
+* **Multi-Agent Critiquing**: Executes three parallel auditor agents (Messaging, Pricing, and Trust Critics) built directly on **Google Gemini 3.5 Flash** (via OpenRouter) to evaluate scraped landing page content against industry guidelines.
+* **Conflict Resolution & Aggregation**: An Editor Reconciler agent reviews critic score discrepancies, synthesizes an editorial summary, and compiles a prioritized list of fix checklist tickets.
+
 ## Running the Application
 
 ### 1. Configure API Credentials

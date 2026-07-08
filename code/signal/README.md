@@ -8,6 +8,11 @@ Signal is a weekly health triage board built for venture capital partners. It mo
 * **Urgency Scoring**: Ranks startups from 0.0 (stable/growing) to 10.0 (crisis) to construct a priority attention dashboard.
 * **Acquisition URL Diligence / Onboarding**: Supports pasting a new startup's website URL to auto-scrape landing copy and generate an initial profile using LLM diligence.
 
+## Technical Architecture & AI Engine
+Signal is built using a custom multi-stage structured extraction pipeline:
+* **Structured Data Extraction**: Founder reports are parsed using structured JSON schemas passed to **Google Gemini 3.5 Flash** (via OpenRouter), obtaining clean sentiment and numerical metrics.
+* **Telemetry & History Tracking**: Stores historical updates in an **SQLite** database. A custom Python engine scans past logs, calculates standard deviations for ARR, sentiment, and blockers, and computes the final Urgency Score.
+
 ## Running the Application
 
 ### 1. Configure API Credentials
