@@ -49,6 +49,13 @@ As permitted by the guidelines, data is shared between all three tools through a
 
 ---
 
+## 🌐 Live Deployed Application Links
+
+You can access and test the live, fully functional cloud portals here:
+* **TogetherMind**: [https://togethermind.onrender.com](https://togethermind.onrender.com)
+* **Signal**: [https://signal-5u0b.onrender.com](https://signal-5u0b.onrender.com)
+* **Corridor Compass**: [https://compass-rsbi.onrender.com](https://compass-rsbi.onrender.com)
+
 ## 🚀 How to Run the Tools
 
 Each subfolder is a fully self-contained application with its own python backend (`main.py`) and dedicated UI client (`static/`).
@@ -84,9 +91,3 @@ Each subfolder is a fully self-contained application with its own python backend
 
 ---
 
-## 🌐 Live Deployed Application Links
-
-You can access and test the live, fully functional cloud portals here:
-* **TogetherMind**: [https://togethermind.onrender.com](https://togethermind.onrender.com)
-* **Signal**: [https://signal-5u0b.onrender.com](https://signal-5u0b.onrender.com)
-* **Corridor Compass**: [https://compass-rsbi.onrender.com](https://compass-rsbi.onrender.com)

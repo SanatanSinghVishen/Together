@@ -24,17 +24,17 @@ Because high-touch help is resource-intensive, partners stay highly selective ab
 
 These three tools are prioritized because they directly protect partner time and help India-built startups succeed globally.
 
-### 1. TogetherMind: Operator Knowledge Assistant (Port 8001)
+### 1. TogetherMind: Operator Knowledge Assistant
 * **What it does:** Allows founders and team members to ask strategic business questions (e.g., *"How do I hire my first sales manager in the US?"*). It retrieves relevant answers from past strategy memos, playbooks, and blog posts, and links to the source documents.
 * **How it scales partners:** Instead of partners repeating the same advice in meetings, their accumulated knowledge becomes searchable and reusable 24/7.
 * **How it works:** Ingests strategy documents and essays into a semantic vector database (ChromaDB). When a user queries the system, a retrieval agent finds the top matches, generates an answer with citations, and automatically forwards the question to a real human partner if the question requires subjective VC judgment.
 
-### 2. Signal: Portfolio Health Triage (Port 8002)
+### 2. Signal: Portfolio Health Triage
 * **What it does:** Reviews weekly progress updates submitted by founders, extracts key metrics and sentiment, and ranks the portfolio in a dashboard so partners know which companies need urgent attention.
 * **How it scales partners:** Ensures partners spend their limited time proactively supporting struggling companies rather than reacting to the loudest founders.
 * **How it works:** Automatically parses weekly text updates using an AI analyst to extract key signals (revenue trend, hiring status, blockers, sentiment, and red flags). It compares these metrics against the company's historical baseline to spot negative trends (e.g., sudden drop in sentiment, persistent flat revenue) and scores urgency from 0 to 10. Also allows onboarding new startups simply by pasting their website link.
 
-### 3. Corridor Compass: Global Readiness Auditor (Port 8003)
+### 3. Corridor Compass: Global Readiness Auditor
 * **What it does:** Audits a startup’s landing page copy and structure to evaluate how well it communicates value to international enterprise buyers. It provides an overall readiness score and a prioritized checklist of concrete fixes.
 * **How it scales partners:** Gives founders instant, repeatable feedback on their GTM messaging, pricing, and trust signals before they present to a partner or a global client.
 * **How it works:** Clean text and structure are parsed from the startup's website. An optional **Target Country** field lets users run audits specific to local markets (e.g., UK, Germany, Japan). Three specialized AI critics audit the content:
@@ -42,12 +42,6 @@ These three tools are prioritized because they directly protect partner time and
   * **Pricing Critic:** Evaluates price transparency, self-serve models, and packaging metrics. If pricing tables are missing on the landing page, it runs a programmatic DuckDuckGo search query to find external subscription plans, ensuring startups aren't penalized unfairly.
   * **Trust Critic:** Checks for security signals (SOC2, GDPR), customer proof, and legal links.
   An editor agent synthesizes the critic reports into a single readiness scorecard and actionable task list.
-
----
-
-## Future Expansion Ideas
-
-These three ideas are designed for future implementation to further streamline operations.
 
 ### 4. Dealflow Triage Copilot
 * **What it does:** Automatically reads incoming pitch decks and startup profiles to filter and sort them based on Together Fund’s investment criteria.
